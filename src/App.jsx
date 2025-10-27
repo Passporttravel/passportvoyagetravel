@@ -102,7 +102,7 @@ const copy = {
     {
       id: "asturias",
       name: { es: "Asturias", en: "Asturias" },
-      image: "/asturias.jpg",
+      image: image: "/asturias.jpg?v=1",
       desc: {
         es: "Picos de Europa, Covadonga y sidra. Acantilados verdes y villas marineras.",
         en: "Picos de Europa, Covadonga and cider culture. Green cliffs and fishing towns."

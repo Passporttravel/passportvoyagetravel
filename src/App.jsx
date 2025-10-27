@@ -52,69 +52,131 @@ const copy = {
 // DESTINOS (cámbialos cuando quieras)
 const DESTINATIONS = {
   spain: [
-  {
-    id: "navarra",
-    name: { es: "Navarra", en: "Navarre" },
-    image: "/navarra.jpg", // tu imagen
-    desc: {
-      es: "Bosques y monasterios. Pamplona, Olite y el Pirineo. Enoturismo y patrimonio románico.",
-      en: "Forests and monasteries. Pamplona, Olite and the Pyrenees. Wine routes and Romanesque heritage."
+  const DESTINATIONS = {
+  spain: [
+    {
+      id: "navarra",
+      name: { es: "Navarra", en: "Navarre" },
+      image: "/navarra.jpg",
+      desc: {
+        es: "Bosques y monasterios. Pamplona, Olite y el Pirineo. Enoturismo y patrimonio románico.",
+        en: "Forests and monasteries. Pamplona, Olite and the Pyrenees. Wine routes and Romanesque heritage."
+      },
+      sections: [
+        {
+          id: "baztan",
+          title: { es: "Valle de Baztán", en: "Baztán Valley" },
+          text: {
+            es: "Cascadas, caseríos y senderos entre brumas. Elizondo como base; cuevas de Zugarramurdi cerca.",
+            en: "Waterfalls, farmhouses and misty trails. Base in Elizondo; Zugarramurdi caves nearby."
+          },
+          image: "/baztan.jpg"
+        },
+        {
+          id: "pamplona",
+          title: { es: "Pamplona y Sanfermines", en: "Pamplona & San Fermín" },
+          text: {
+            es: "Casco histórico, murallas y gastronomía de barra. En julio, encierros y ambiente mundial.",
+            en: "Old town, ramparts and pintxos culture. In July, world-famous bull runs."
+          },
+          image: "/pamplona.jpg"
+        },
+        {
+          id: "irati",
+          title: { es: "Selva de Irati", en: "Irati Forest" },
+          text: {
+            es: "Hayedo-abetal de referencia. Otoños dorados y rutas señalizadas.",
+            en: "Renowned beech-fir forest. Golden autumns and marked trails."
+          },
+          image: "/irati.jpg"
+        },
+        {
+          id: "olite",
+          title: { es: "Olite y su Palacio", en: "Olite & its Palace" },
+          text: {
+            es: "Arquitectura palaciega y vinos D.O. Navarra.",
+            en: "Fair-tale palace and Navarra D.O. wines."
+          },
+          image: "/olite.jpg"
+        }
+      ]
     },
-    sections: [
-      {
-        id: "baztan",
-        title: { es: "Valle de Baztán", en: "Baztán Valley" },
-        text: {
-          es: "Cascadas, caseríos y senderos entre brumas. Elizondo como base, cuevas de Zugarramurdi cerca.",
-          en: "Waterfalls, farmhouses and misty trails. Base in Elizondo; Zugarramurdi caves nearby."
-        },
-        image: "/baztan.jpg" // opcional
-      },
-      {
-        id: "pamplona",
-        title: { es: "Pamplona y Sanfermines", en: "Pamplona & San Fermín" },
-        text: {
-          es: "Casco histórico, murallas y gastronomía de barra. En julio, encierros y ambiente mundial.",
-          en: "Old town, ramparts and pintxos culture. In July, world-famous bull runs."
-        },
-        image: "/pamplona.jpg"
-      },
-      {
-        id: "irati",
-        title: { es: "Selva de Irati", en: "Irati Forest" },
-        text: {
-          es: "Uno de los hayedos-abetales más extensos de Europa. Otoños dorados y rutas señalizadas.",
-          en: "One of Europe’s largest beech–fir forests. Golden autumns and marked trails."
-        },
-        image: "/irati.jpg"
-      },
-      {
-        id: "olite",
-        title: { es: "Olite y su Palacio", en: "Olite & its Palace" },
-        text: {
-          es: "Arquitectura palaciega y vinos D.O. Navarra. Atardeceres fotogénicos.",
-          en: "Fair-tale palace and Navarra D.O. wines. Photo-worthy sunsets."
-        },
-        image: "/olite.jpg"
+    {
+      id: "asturias",
+      name: { es: "Asturias", en: "Asturias" },
+      image: "/asturias.jpg",
+      desc: {
+        es: "Picos de Europa, Covadonga y sidra. Acantilados verdes y villas marineras.",
+        en: "Picos de Europa, Covadonga and cider culture. Green cliffs and fishing towns."
       }
-    ]
-  },
-  // deja el resto (Asturias, Galicia, etc.) como están y luego les añades 'sections' igual que a Navarra
-]
-
-    { id: "asturias", name: { es: "Asturias", en: "Asturias" }, image: "https://images.unsplash.com/photo-1558980664-10b1e1c6e0d1?q=80&w=1600&auto=format&fit=crop", desc: { es: "Picos de Europa, Covadonga y sidra. Acantilados verdes y villas marineras.", en: "Picos de Europa, Covadonga and cider culture. Green cliffs and fishing towns." } },
-    { id: "galicia", name: { es: "Galicia", en: "Galicia" }, image: "https://images.unsplash.com/photo-1509587584298-0f3b3a3c5d5e?q=80&w=1600&auto=format&fit=crop", desc: { es: "Camino de Santiago, rías y faros. Marisco y tradición.", en: "Camino de Santiago, rías and lighthouses. Seafood and tradition." } },
-    { id: "basque-fr", name: { es: "País Vasco francés", en: "French Basque Country" }, image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop", desc: { es: "Biarritz, Bayona y playas elegantes. Gastronomía atlántica y belle époque.", en: "Biarritz, Bayonne and elegant beaches. Atlantic cuisine and belle époque." } },
-    { id: "rioja", name: { es: "La Rioja", en: "La Rioja" }, image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c76e2?q=80&w=1600&auto=format&fit=crop", desc: { es: "Bodegas icónicas, arquitectura vanguardista y paisajes de viñedo.", en: "Iconic wineries, cutting-edge architecture and vineyard landscapes." } },
-    { id: "aragon", name: { es: "Aragón", en: "Aragon" }, image: "https://images.unsplash.com/photo-1600093463592-d9b1c86b9a0d?q=80&w=1600&auto=format&fit=crop", desc: { es: "Zaragoza mudéjar, Pirineo salvaje y pueblos de piedra.", en: "Mudejar Zaragoza, wild Pyrenees and stone villages." } },
+    },
+    {
+      id: "galicia",
+      name: { es: "Galicia", en: "Galicia" },
+      image: "/galicia.jpg",
+      desc: {
+        es: "Camino de Santiago, rías y faros. Marisco y tradición.",
+        en: "Camino de Santiago, rías and lighthouses. Seafood and tradition."
+      }
+    },
+    {
+      id: "basque-fr",
+      name: { es: "País Vasco francés", en: "French Basque Country" },
+      image: "/basque-fr.jpg",
+      desc: {
+        es: "Biarritz y Bayona. Gastronomía atlántica y belle époque.",
+        en: "Biarritz and Bayonne. Atlantic cuisine and belle époque."
+      }
+    },
+    {
+      id: "rioja",
+      name: { es: "La Rioja", en: "La Rioja" },
+      image: "/rioja.jpg",
+      desc: {
+        es: "Bodegas icónicas, arquitectura de autor y viñedos.",
+        en: "Iconic wineries, signature architecture and vineyards."
+      }
+    },
+    {
+      id: "aragon",
+      name: { es: "Aragón", en: "Aragon" },
+      image: "/aragon.jpg",
+      desc: {
+        es: "Zaragoza mudéjar, Pirineo salvaje y pueblos de piedra.",
+        en: "Mudejar Zaragoza, wild Pyrenees and stone villages."
+      }
+    }
   ],
   usa: [
-    { id: "nyc", name: { es: "Nueva York", en: "New York City" }, image: "https://images.unsplash.com/photo-1488747279002-c8523379faaa?q=80&w=1600&auto=format&fit=crop", desc: { es: "Navidad en Rockefeller, Broadway y miradores.", en: "Christmas at Rockefeller, Broadway shows and observatories." } },
-    { id: "orlando", name: { es: "Orlando", en: "Orlando" }, image: "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?q=80&w=1600&auto=format&fit=crop", desc: { es: "Parques temáticos y compras.", en: "Theme parks and shopping." } },
-    { id: "miami", name: { es: "Miami", en: "Miami" }, image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop", desc: { es: "Art Deco y playas infinitas.", en: "Art Deco and endless beaches." } },
-  ],
+    {
+      id: "nyc",
+      name: { es: "Nueva York", en: "New York City" },
+      image: "/nyc.jpg",
+      desc: {
+        es: "Navidad en Rockefeller, Broadway y miradores.",
+        en: "Christmas at Rockefeller, Broadway shows and observatories."
+      }
+    },
+    {
+      id: "orlando",
+      name: { es: "Orlando", en: "Orlando" },
+      image: "/orlando.jpg",
+      desc: {
+        es: "Parques temáticos y compras.",
+        en: "Theme parks and shopping."
+      }
+    },
+    {
+      id: "miami",
+      name: { es: "Miami", en: "Miami" },
+      image: "/miami.jpg",
+      desc: {
+        es: "Art Deco y playas infinitas.",
+        en: "Art Deco and endless beaches."
+      }
+    }
+  ]
 };
-
 function Badge({ children }) {
   return <span className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium backdrop-blur bg-white/60 border-white/30 shadow-sm">{children}</span>;
 }

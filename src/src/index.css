@@ -1,5 +1,20 @@
-/* Deja esto simple para descartar estilos que oculten el texto */
-html, body, #root { height: 100%; margin: 0; }
-body { background: #f5f7fb; color: #111; font-family: system-ui, Arial, sans-serif; }
-a { color: #0a58ca; text-decoration: none; }
-a:hover { text-decoration: underline; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f8fafc;
+  color: #111;
+}
+
+a {
+  color: #0a58ca;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

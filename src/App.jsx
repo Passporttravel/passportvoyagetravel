@@ -50,8 +50,6 @@ const copy = {
 };
 
 // DESTINOS (cámbialos cuando quieras)
-const DESTINATIONS = {
-  spain: [
   const DESTINATIONS = {
   spain: [
     {

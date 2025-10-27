@@ -214,11 +214,6 @@ function Modal({ open, onClose, children }) {
 export default function App() {
   const [lang, setLang] = useState("es"); // Cambia a "en" si quieres empezar en inglés
   const t = copy[lang];
-  // --- DIAGNÓSTICO TEMPORAL DE IMAGENES ---
-// Muestra 3 intentos: (A) desde /public en Vercel, (B) desde GitHub RAW, (C) un fallback
-const TEST_PUBLIC = "/asturias.jpg?v=5";
-const TEST_GITHUB_RAW = "https://raw.githubusercontent.com/Passporttravel/passportvoyagetravel/main/public/asturias.jpg"; // tu repo público
-const TEST_FALLBACK = "https://images.unsplash.com/photo-1558980664-10b1e1c6e0d1?q=80&w=1600&auto=format&fit=crop";
 
   const [openItem, setOpenItem] = useState(null);
 
@@ -261,24 +256,7 @@ const TEST_FALLBACK = "https://images.unsplash.com/photo-1558980664-10b1e1c6e0d1
         <div className="max-w-7xl mx-auto px-4 pt-20 pb-10 md:pt-28 md:pb-16">
           <Badge>{t.hero.kicker}</Badge>
           <h1 className="mt-4 text-4xl md:text-6xl font-semibold max-w-4xl leading-tight">{t.hero.title}</h1>
-          <p className="mt-4 text-neutral-700 max-w-3xl">{t.hero.subtitle}</p> {/* BLOQUE TEMPORAL DE PRUEBA (luego lo quitamos) */}
-<div style={{marginTop: 12, padding: 12, background: "#fff", borderRadius: 12, boxShadow: "0 0 0 1px rgba(0,0,0,.08)"}}>
-  <strong>Prueba de imágenes:</strong>
-  <div style={{display: "grid", gap: 8, marginTop: 8}}>
-    <div>
-      <div>👉 A) /public en Vercel: <code>{TEST_PUBLIC}</code></div>
-      <img src={TEST_PUBLIC} alt="test-public" style={{height: 120, objectFit: "cover", width: "100%", borderRadius: 8}} />
-    </div>
-    <div>
-      <div>👉 B) GitHub RAW directo:</div>
-      <img src={TEST_GITHUB_RAW} alt="test-raw" style={{height: 120, objectFit: "cover", width: "100%", borderRadius: 8}} />
-    </div>
-    <div>
-      <div>👉 C) Fallback (Unsplash):</div>
-      <img src={TEST_FALLBACK} alt="test-fallback" style={{height: 120, objectFit: "cover", width: "100%", borderRadius: 8}} />
-    </div>
-  </div>
-</div>
+          <p className="mt-4 text-neutral-700 max-w-3xl">{t.hero.subtitle}</p> 
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="#routes" className="rounded-full bg-neutral-900 text-white px-5 py-3 text-sm hover:bg-neutral-800">{t.hero.ctaPrimary}</a>

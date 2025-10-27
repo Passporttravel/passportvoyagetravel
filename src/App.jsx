@@ -52,7 +52,6 @@ const copy = {
 // DESTINOS (cámbialos cuando quieras)
 const DESTINATIONS = {
   spain: [
-    spain: [
   {
     id: "navarra",
     name: { es: "Navarra", en: "Navarre" },

@@ -102,7 +102,7 @@ const copy = {
     {
       id: "asturias",
       name: { es: "Asturias", en: "Asturias" },
-      image: image: "https://raw.githubusercontent.com/Passporttravel/passportvoyagetravel/main/public/asturias.jpg",
+      image: "https://raw.githubusercontent.com/Passporttravel/passportvoyagetravel/main/public/asturias.jpg",
       desc: {
         es: "Picos de Europa, Covadonga y sidra. Acantilados verdes y villas marineras.",
         en: "Picos de Europa, Covadonga and cider culture. Green cliffs and fishing towns."

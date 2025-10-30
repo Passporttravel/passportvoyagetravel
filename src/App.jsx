@@ -222,13 +222,13 @@ export default function App() {
       {/* NAV */}
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-black/5">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-emerald-500" />
-            <div>
-              <p className="font-semibold leading-tight">{t.brand}</p>
-              <p className="text-[10px] text-neutral-500">{t.domainHint}</p>
-            </div>
-          </div>
+     <div className="flex items-center gap-3">
+  <img src="/logo.svg" alt="Passportvoyagetravel" className="h-8 w-auto" />
+  <div>
+    <p className="font-semibold leading-tight">{t.brand}</p>
+    <p className="text-[10px] text-neutral-500">{t.domainHint}</p>
+  </div>
+</div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#routes" className="hover:text-indigo-600">{t.nav.routes}</a>
             <a href="#spain" className="hover:text-indigo-600">{t.nav.spain}</a>

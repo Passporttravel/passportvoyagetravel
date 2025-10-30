@@ -1,3 +1,31 @@
+:root{
+  --brand: #0f172a;      /* color principal (botones oscuros, textos fuertes) */
+  --accent: #2563eb;     /* acento (links, detalles) */
+  --accent-2: #10b981;   /* segundo acento (gradientes) */
+  --surface: #f8fafc;    /* fondo general */
+  --text: #111827;       /* texto base */
+}
+body {
+  background: var(--surface);
+  color: var(--text);
+}
+/* Botón principal que ahora usa bg-neutral-900 → lo llevamos a --brand */
+a.bg-neutral-900,
+button.bg-neutral-900 {
+  background-color: var(--brand) !important;
+  color: #fff !important;
+}
+a.bg-neutral-900:hover,
+button.bg-neutral-900:hover {
+  filter: brightness(0.95);
+}
+
+/* Enlaces de acento (clases usadas en la web) */
+.text-indigo-700 { color: var(--accent) !important; }
+.hover\:text-indigo-600:hover { color: var(--accent) !important; }
+
+/* Bordes y superficies suaves */
+.border-black\/5 { border-color: color-mix(in oklab, var(--brand) 5%, transparent) !important; }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

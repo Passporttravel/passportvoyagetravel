@@ -225,6 +225,7 @@ export default function App() {
      <div className="flex items-center gap-3">
   <img src="/logo.svg" alt="Passportvoyagetravel" className="h-8 w-auto" />
   <div>
+    <img src="/logo.png" alt="Logo Passportvoyagetravel" className="h-10 w-auto" />
     <p className="font-semibold leading-tight">{t.brand}</p>
     <p className="text-[10px] text-neutral-500">{t.domainHint}</p>
   </div>

@@ -227,7 +227,7 @@ export default function App() {
      <img
   src="/logo.png"
   alt="Logo Passportvoyagetravel"
-  className="h-28 w-auto p-1 md:p-2"
+  className="h-32 w-auto p-1 md:p-2"
   style={{ objectFit: "contain" }}
 />
       <div>

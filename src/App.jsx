@@ -224,7 +224,7 @@ export default function App() {
   <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
     {/* Logo + nombre */}
     <div className="flex items-center gap-3">
-      <img src="/logo.png" alt="Passportvoyagetravel" className="h-10 w-auto" />
+      <img src="/logo.png" alt="Passportvoyagetravel" className="h-20 w-auto" />
       <div>
         <p className="font-semibold leading-tight">{t.brand}</p>
         <p className="text-[10px] text-neutral-500">{t.domainHint}</p>

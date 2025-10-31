@@ -216,6 +216,7 @@ export default function App() {
   const t = copy[lang];
 
   const [openItem, setOpenItem] = useState(null);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">

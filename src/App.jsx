@@ -220,32 +220,41 @@ export default function App() {
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
       {/* NAV */}
-      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-black/5">
-        <div className="flex items-center gap-3">
-  <img src="/logo.png" alt="Passportvoyagetravel" className="h-12 w-auto" />
-  <div>
-    <p className="font-semibold leading-tight">{t.brand}</p>
-    <p className="text-[10px] text-neutral-500">{t.domainHint}</p>
-  </div>
-</div>
-          <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#routes" className="hover:text-indigo-600">{t.nav.routes}</a>
-            <a href="#spain" className="hover:text-indigo-600">{t.nav.spain}</a>
-            <a href="#usa" className="hover:text-indigo-600">{t.nav.usa}</a>
-            <a href="#posts" className="hover:text-indigo-600">{t.nav.posts}</a>
-            <a href="#contact" className="hover:text-indigo-600">{t.nav.contact}</a>
-          </nav>
-          <div className="flex items-center gap-3">
-            <button className="text-xs rounded-full border px-3 py-1 hover:bg-neutral-100" onClick={() => setLang(lang === "es" ? "en" : "es")} aria-label="Toggle language">
-              {lang === "es" ? "EN" : "ES"}
-            </button>
-            <a href="#contact" className="hidden md:inline-flex items-center rounded-full bg-neutral-900 text-white text-sm px-4 py-2 hover:bg-neutral-800">
-              {t.nav.book}
-            </a>
-          </div>
-        </div>
-      </header>
+    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-black/5">
+  <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    {/* Logo + nombre */}
+    <div className="flex items-center gap-3">
+      <img src="/logo.png" alt="Passportvoyagetravel" className="h-10 w-auto" />
+      <div>
+        <p className="font-semibold leading-tight">{t.brand}</p>
+        <p className="text-[10px] text-neutral-500">{t.domainHint}</p>
+      </div>
+    </div>
 
+    {/* Menú */}
+    <nav className="hidden md:flex items-center gap-6 text-sm">
+      <a href="#routes" className="hover:text-indigo-600">{t.nav.routes}</a>
+      <a href="#spain" className="hover:text-indigo-600">{t.nav.spain}</a>
+      <a href="#usa" className="hover:text-indigo-600">{t.nav.usa}</a>
+      <a href="#posts" className="hover:text-indigo-600">{t.nav.posts}</a>
+      <a href="#contact" className="hover:text-indigo-600">{t.nav.contact}</a>
+    </nav>
+
+    {/* Idioma + CTA */}
+    <div className="flex items-center gap-3">
+      <button
+        className="text-xs rounded-full border px-3 py-1 hover:bg-neutral-100"
+        onClick={() => setLang(lang === "es" ? "en" : "es")}
+        aria-label="Toggle language"
+      >
+        {lang === "es" ? "EN" : "ES"}
+      </button>
+      <a href="#contact" className="hidden md:inline-flex items-center rounded-full bg-neutral-900 text-white text-sm px-4 py-2 hover:bg-neutral-800">
+        {t.nav.book}
+      </a>
+    </div>
+  </div>
+</header>
       {/* HERO */}
       <section className="relative">
         <div className="absolute inset-0 -z-10">

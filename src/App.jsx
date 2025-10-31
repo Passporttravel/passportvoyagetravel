@@ -289,7 +289,7 @@ export default function App() {
     <div
       onClick={() => setAboutOpen(true)}
       className="cursor-pointer select-none"
-      title={lang === "es" ? "Haz clic para conocer nuestra historia" : "Click to read our story"}
+      title={lang === "es" ? "Conoce nuestra historia" : "Read our story"}
     >
       <h1 className="mt-4 text-4xl md:text-6xl font-semibold max-w-4xl leading-tight mx-auto">
         {t.hero.title}

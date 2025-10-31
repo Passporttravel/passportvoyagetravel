@@ -267,7 +267,32 @@ export default function App() {
           <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=2400&auto=format&fit=crop" alt="City & nature montage" className="w-full h-[62vh] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 pt-20 pb-10 md:pt-28 md:pb-16">
+      {/* LOGO GRANDE */}
+<img
+  src="/logo.png"
+  alt="Passportvoyagetravel"
+  className="mx-auto h-40 md:h-56 w-auto mb-6"
+  style={{ objectFit: "contain" }}
+/>
+
+<Badge>{t.hero.kicker}</Badge>
+
+{/* BLOQUE CLICABLE QUE ABRE “QUIÉNES SOMOS” */}
+<div
+  onClick={() => setAboutOpen(true)}
+  className="cursor-pointer select-none"
+  title={lang === "es" ? "Haz clic para conocer nuestra historia" : "Click to read our story"}
+>
+  <h1 className="mt-4 text-4xl md:text-6xl font-semibold max-w-4xl leading-tight mx-auto">
+    {t.hero.title}
+  </h1>
+  <p className="mt-4 text-neutral-700 max-w-3xl mx-auto">
+    {t.hero.subtitle}
+  </p>
+  <p className="mt-2 text-sm text-neutral-500">
+    {lang === "es" ? "Haz clic aquí para conocer nuestra historia" : "Click here to read our story"}
+  </p>
+</div>
           <Badge>{t.hero.kicker}</Badge>
           <h1 className="mt-4 text-4xl md:text-6xl font-semibold max-w-4xl leading-tight">{t.hero.title}</h1>
           <p className="mt-4 text-neutral-700 max-w-3xl">{t.hero.subtitle}</p> 

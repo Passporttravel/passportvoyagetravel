@@ -298,7 +298,7 @@ export default function App() {
         {t.hero.subtitle}
       </p>
       <p className="mt-2 text-sm text-neutral-500">
-        {lang === "es" ? "Haz clic aquí para conocer nuestra historia" : "Click here to read our story"}
+        {lang === "es" ? "Conoce nuestra historia" : "Read our story"}
       </p>
     </div>
 

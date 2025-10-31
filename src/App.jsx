@@ -219,6 +219,19 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-neutral-50 text-neutral-900">
+      <header className="w-full bg-white/90 backdrop-blur border-b border-black/5">
+  <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
+    <img
+      src="/logo.png"
+      alt="Logo"
+      className="h-12 w-auto"
+      onError={(e) => { e.currentTarget.src = "/asturias.jpg"; }}
+    />
+    <span className="text-sm text-neutral-500">
+      {`Si ves la foto de Asturias, tu archivo no se llama /public/logo.png`}
+    </span>
+  </div>
+</header>
       {/* NAV */}
       <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-black/5">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">

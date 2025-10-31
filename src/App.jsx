@@ -411,6 +411,82 @@ export default function App() {
           <div className="text-xs text-neutral-500"><span>ES / EN</span></div>
         </div>
       </footer>
+{/* MODAL QUIÉNES SOMOS */}
+<Modal open={aboutOpen} onClose={() => setAboutOpen(false)}>
+  <div className="max-w-3xl w-full">
+    <div className="p-6 border-b">
+      <h3 className="text-2xl font-semibold">
+        {lang === "es" ? "Quiénes somos" : "About us"}
+      </h3>
+    </div>
+
+    <div className="p-6 grid md:grid-cols-3 gap-5 items-start">
+      {/* Foto/Logo en el modal (opcional) */}
+      <div className="md:col-span-1">
+        <img
+          src="/logo.png"
+          alt="Logo"
+          className="w-full h-36 object-contain rounded-xl bg-neutral-50 p-3"
+        />
+      </div>
+
+      {/* Texto editable */}
+      <div className="md:col-span-2 text-neutral-800 leading-relaxed text-sm md:text-base">
+        {lang === "es" ? (
+          <>
+            <p>
+              En <strong>Passportvoyagetravel</strong> diseñamos experiencias con identidad:
+              rutas sagradas por el norte de España y el sur de Francia, escapadas urbanas
+              y viajes a la Costa Este de EE. UU. para viajeros que buscan cultura, paisaje
+              y buena gastronomía.
+            </p>
+            <p className="mt-3">
+              Somos un equipo pequeño y cercano. Colaboramos con proveedores de confianza y
+              plataformas como Civitatis y Viator, pero nuestra prioridad es el itinerario a tu medida.
+            </p>
+            <p className="mt-3">
+              ¿Qué nos diferencia? Escucha atenta, logística clara y recomendaciones honestas
+              fruto de patearnos los destinos. Si quieres, te acompañamos desde el diseño
+              hasta el último detalle del viaje.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              At <strong>Passportvoyagetravel</strong> we craft journeys with identity:
+              sacred routes across Northern Spain and Southern France, city breaks,
+              and East Coast USA trips for travelers who value culture, scenery and food.
+            </p>
+            <p className="mt-3">
+              We’re a small, hands-on team. We work with trusted partners and platforms
+              like Civitatis and Viator, but our priority is your custom itinerary.
+            </p>
+            <p className="mt-3">
+              What makes us different? Attentive listening, clear logistics and honest,
+              on-the-ground recommendations. We can assist from planning to your last day.
+            </p>
+          </>
+        )}
+
+        <div className="mt-5 flex flex-wrap gap-3">
+          <a
+            href={EMAIL}
+            className="rounded-full bg-neutral-900 text-white px-5 py-3 text-sm hover:bg-neutral-800"
+          >
+            {lang === "es" ? "Escríbenos" : "Message us"}
+          </a>
+          <a
+            href={CIVITATIS_LINK}
+            target="_blank" rel="noreferrer"
+            className="rounded-full border px-5 py-3 text-sm hover:bg-neutral-100"
+          >
+            {lang === "es" ? "Ver seguros / actividades" : "See insurance / activities"}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Modal>
 
       {/* MODAL DETALLE */}
       <Modal open={!!openItem} onClose={() => setOpenItem(null)}>

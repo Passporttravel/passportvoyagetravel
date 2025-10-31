@@ -262,49 +262,58 @@ export default function App() {
   </div>
 </header>
       {/* HERO */}
-      <section className="relative">
-        <div className="absolute inset-0 -z-10">
-          <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=2400&auto=format&fit=crop" alt="City & nature montage" className="w-full h-[62vh] object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent" />
-        </div>
-      {/* LOGO GRANDE */}
-<img
-  src="/logo.png"
-  alt="Passportvoyagetravel"
-  className="mx-auto h-40 md:h-56 w-auto mb-6"
-  style={{ objectFit: "contain" }}
-/>
+<section className="relative">
+  {/* Fondo de la cabecera */}
+  <div className="absolute inset-0 -z-10">
+    <img
+      src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?q=80&w=2400&auto=format&fit=crop"
+      alt="City & nature montage"
+      className="w-full h-[62vh] object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent" />
+  </div>
 
-<Badge>{t.hero.kicker}</Badge>
+  {/* Contenido del hero */}
+  <div className="max-w-7xl mx-auto px-4 pt-20 pb-10 md:pt-28 md:pb-16 text-center">
+    {/* LOGO GRANDE */}
+    <img
+      src="/logo.png"  /* usa /logo.svg si tu logo es SVG */
+      alt="Passportvoyagetravel"
+      className="mx-auto h-40 md:h-56 w-auto mb-6"
+      style={{ objectFit: "contain" }}
+    />
 
-{/* BLOQUE CLICABLE QUE ABRE “QUIÉNES SOMOS” */}
-<div
-  onClick={() => setAboutOpen(true)}
-  className="cursor-pointer select-none"
-  title={lang === "es" ? "Haz clic para conocer nuestra historia" : "Click to read our story"}
->
-  <h1 className="mt-4 text-4xl md:text-6xl font-semibold max-w-4xl leading-tight mx-auto">
-    {t.hero.title}
-  </h1>
-  <p className="mt-4 text-neutral-700 max-w-3xl mx-auto">
-    {t.hero.subtitle}
-  </p>
-  <p className="mt-2 text-sm text-neutral-500">
-    {lang === "es" ? "Haz clic aquí para conocer nuestra historia" : "Click here to read our story"}
-  </p>
-</div>
-          <Badge>{t.hero.kicker}</Badge>
-          <h1 className="mt-4 text-4xl md:text-6xl font-semibold max-w-4xl leading-tight">{t.hero.title}</h1>
-          <p className="mt-4 text-neutral-700 max-w-3xl">{t.hero.subtitle}</p> 
+    <Badge>{t.hero.kicker}</Badge>
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href="#routes" className="rounded-full bg-neutral-900 text-white px-5 py-3 text-sm hover:bg-neutral-800">{t.hero.ctaPrimary}</a>
-            <a href="#contact" className="rounded-full border px-5 py-3 text-sm hover:bg-neutral-100">{t.hero.ctaSecondary}</a>
-          </div>
-        </div>
-      </section>
+    {/* Bloque clicable que abre “Quiénes somos” */}
+    <div
+      onClick={() => setAboutOpen(true)}
+      className="cursor-pointer select-none"
+      title={lang === "es" ? "Haz clic para conocer nuestra historia" : "Click to read our story"}
+    >
+      <h1 className="mt-4 text-4xl md:text-6xl font-semibold max-w-4xl leading-tight mx-auto">
+        {t.hero.title}
+      </h1>
+      <p className="mt-4 text-neutral-700 max-w-3xl mx-auto">
+        {t.hero.subtitle}
+      </p>
+      <p className="mt-2 text-sm text-neutral-500">
+        {lang === "es" ? "Haz clic aquí para conocer nuestra historia" : "Click here to read our story"}
+      </p>
+    </div>
 
-      {/* RUTAS SAGRADAS */}
+    {/* Botones del hero (opcional) */}
+    <div className="mt-6 flex gap-3 justify-center">
+      <a href="#spain" className="rounded-full bg-neutral-900 text-white px-5 py-3 text-sm hover:bg-neutral-800">
+        {t.hero.ctaPrimary}
+      </a>
+      <a href="#contact" className="rounded-full border px-5 py-3 text-sm hover:bg-neutral-100">
+        {t.hero.ctaSecondary}
+      </a>
+    </div>
+  </div>
+</section>
+
       <section id="routes" className="py-14 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
           <SectionTitle overline={t.nav.routes} title={t.sacredRoutes.title} subtitle={t.sacredRoutes.blurb} />
